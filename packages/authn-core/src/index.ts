@@ -1,1 +1,1 @@
-export const hello = () => "Hello from Authn Core"
+export const hello = () => 'Hello from Authn Core'
