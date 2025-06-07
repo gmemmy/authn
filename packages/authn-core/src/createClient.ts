@@ -4,15 +4,17 @@ import {AuthnStorage} from './storage/types'
 /**
  * The main authentication client that orchestrates adapter and storage operations.
  *
- * This client serves as the core of the authentication system, combining
- * an authentication adapter (for API calls) with a storage mechanism (for token persistence).
+ * This client orchestrates mobile-optimized authentication flows by combining
+ * an authentication adapter (for API calls) with secure device storage (for session persistence).
+ * Designed to handle React Native-specific challenges like app backgrounding, network
+ * connectivity issues, and secure session management across platform differences.
  *
  * @public
  */
 export type AuthnClient = {
   /** The authentication adapter for handling OTP operations */
   adapter: AuthnAdapter
-  /** The storage mechanism for token persistence */
+  /** The secure storage mechanism for session persistence */
   storage: AuthnStorage
 }
 
@@ -25,16 +27,24 @@ export type AuthnClient = {
  *
  * @param opts - Configuration options for the client
  * @param opts.adapter - The authentication adapter implementation
- * @param opts.storage - The storage implementation for token persistence
+ * @param opts.storage - The storage implementation for session persistence
  * @returns A configured AuthnClient instance
  *
  * @example
  * ```typescript
  * import {createAuthnClient} from '@your-org/authn-core';
+ * import {SecureStorageAdapter} from './storage';
+ * import {ApiAdapter} from './api';
  *
  * const client = createAuthnClient({
- *   adapter: new YourApiAdapter(),
- *   storage: new YourStorageAdapter()
+ *   adapter: new ApiAdapter({
+ *     baseUrl: 'https://api.yourapp.com',
+ *     timeout: 10000 // Handle mobile network delays
+ *   }),
+ *   storage: new SecureStorageAdapter({
+ *     service: 'your-app-auth',
+ *     requireBiometrics: true
+ *   })
  * });
  * ```
  *
