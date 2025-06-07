@@ -11,6 +11,7 @@
   "devDependencies": {
     "@eslint/js": "^9.28.0",
     "@types/node": "^22.15.30",
+    "@types/react": "^19.1.6",
     "@typescript-eslint/eslint-plugin": "^8.33.1",
     "@typescript-eslint/parser": "^8.33.1",
     "@vitest/ui": "^3.2.2",
@@ -21,6 +22,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
+    "react": "^19.1.0",
+    "react-native": "^0.79.3",
     "typescript": "^5.8.3",
     "vitest": "^3.2.2"
   }

@@ -1,8 +1,16 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "jsx": "react",
     "noEmit": true
   },
-  "include": ["packages/*/src/**/*", "packages/*/*.ts", "*.ts", "*.js"],
+  "include": [
+    "packages/*/src/**/*",
+    "packages/*/*.ts",
+    "*.ts",
+    "*.js",
+    ".jsx",
+    ".tsx"
+  ],
   "exclude": ["node_modules", "dist", "**/*.d.ts"]
 }
