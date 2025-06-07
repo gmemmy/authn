@@ -1,0 +1,25 @@
+# Don't publish source or test files
+src/
+test/
+__tests__/
+__mocks__/
+
+# Don't publish config or meta
+tsconfig.*.json
+tsconfig.json
+*.tsbuildinfo
+.eslintrc.*
+.prettierrc
+.vscode/
+.idea/
+
+# Don't publish documentation or examples
+README.md
+*.md
+docs/
+example/
+demo/
+
+# Don't publish build artifacts not needed
+*.log
+node_modules/

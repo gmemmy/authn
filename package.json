@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "authn",
+  "scripts": {
+    "build": "pnpm -r run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

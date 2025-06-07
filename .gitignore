@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+packages/*/dist/
+example/dist/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# macOS, Linux, Windows system files
+.DS_Store
+Thumbs.db
+
+# IDE/editor configs
+.vscode/
+.idea/
