@@ -1,5 +1,7 @@
 # authn
 
+![Coverage Badge](https://img.shields.io/badge/coverage-3%25-red)
+
 A React Native authentication library designed for mobile-first OTP flows — solving the pain points that other authentication libraries ignore.
 
 ## Why authn?

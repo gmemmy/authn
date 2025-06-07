@@ -5,7 +5,12 @@ import tsParser from '@typescript-eslint/parser'
 /** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
   {
-    ignores: ['**/dist/**', '**/node_modules/**', '**/.husky/**'],
+    ignores: [
+      '**/dist/**',
+      '**/node_modules/**',
+      '**/.husky/**',
+      '**/__tests__/**',
+    ],
   },
   js.configs.recommended,
   {
