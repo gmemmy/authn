@@ -2,6 +2,9 @@
   "private": true,
   "name": "authn",
   "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "lint": "eslint . --config eslint.config.js",
     "format": "prettier --write .",
