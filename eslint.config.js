@@ -10,6 +10,7 @@ export default [
       '**/node_modules/**',
       '**/.husky/**',
       '**/__tests__/**',
+      'example/**',
     ],
   },
   js.configs.recommended,
